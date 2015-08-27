@@ -1,5 +1,6 @@
 import unittest
-from task2 import fib
+
+from tasks.task2 import fib
 
 
 class Test1(unittest.TestCase):

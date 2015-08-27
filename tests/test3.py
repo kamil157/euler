@@ -1,5 +1,6 @@
 import unittest
-from task3 import prime_factors
+
+from tasks.task3 import prime_factors
 
 
 class Test1(unittest.TestCase):

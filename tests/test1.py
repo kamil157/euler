@@ -1,5 +1,6 @@
 import unittest
-from task1 import multiples
+
+from tasks.task1 import multiples
 
 
 class Test1(unittest.TestCase):
