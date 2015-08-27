@@ -3,7 +3,7 @@ import unittest
 from tasks.task1 import multiples
 
 
-class Test1(unittest.TestCase):
+class Test(unittest.TestCase):
 
     def test_multiples(self):
         self.assertEqual(list(multiples(0)), [])

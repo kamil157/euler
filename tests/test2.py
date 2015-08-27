@@ -3,7 +3,7 @@ import unittest
 from tasks.task2 import fib
 
 
-class Test1(unittest.TestCase):
+class Test(unittest.TestCase):
 
     def test_fib(self):
         self.assertEqual(fib(0), 0)

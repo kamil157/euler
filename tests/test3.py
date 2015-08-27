@@ -3,9 +3,9 @@ import unittest
 from tasks.task3 import prime_factors
 
 
-class Test1(unittest.TestCase):
+class Test(unittest.TestCase):
 
-    def test_fib(self):
+    def test_prime_factors(self):
         self.assertEqual(prime_factors(2), [2])
         self.assertEqual(prime_factors(3), [3])
         self.assertEqual(prime_factors(4), [2, 2])
