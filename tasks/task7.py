@@ -3,23 +3,18 @@ that the 6th prime is 13.
 
 What is the 10 001st prime number?"""
 
-# TODO really slow
-def primes(n):
-    if n < 2:
+
+def primes(limit):
+    if limit < 2:
         return []
-    l = set(range(2, n + 1))
-    tested = set()
+    a = [True] * (limit + 1)
+    a[0] = a[1] = False
 
-    j = 0
-    while j < len(l):
-        p = min(l - tested)
-        # print(p)
-        for i in range(2 * p, n + 1, p):
-            if i in l:
-                l.remove(i)
-        j += 1
-        tested.add(p)
+    for (i, isprime) in enumerate(a):
+        if isprime:
+            yield i
+            for n in range(i * i, limit + 1, i):
+                a[n] = False
 
-    return list(l)
-
-print(primes(110000)[10000])
+if __name__ == "__main__":
+    print(list(primes(200000))[10000])
