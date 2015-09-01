@@ -10,8 +10,8 @@ def primes(limit):
     a = [True] * (limit + 1)
     a[0] = a[1] = False
 
-    for (i, isprime) in enumerate(a):
-        if isprime:
+    for (i, is_prime) in enumerate(a):
+        if is_prime:
             yield i
             for n in range(i * i, limit + 1, i):
                 a[n] = False
