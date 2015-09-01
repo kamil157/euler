@@ -16,4 +16,5 @@ def fib(n):
         return n
     return fib(n - 1) + fib(n - 2)
 
-print(sum(fib(i) for i in range(100) if fib(i) % 2 == 0 and fib(i) < 4000000))
+if __name__ == '__main__':
+    print(sum(fib(i) for i in range(100) if fib(i) % 2 == 0 and fib(i) < 4000000))
