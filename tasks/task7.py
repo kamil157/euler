@@ -4,7 +4,7 @@ that the 6th prime is 13.
 What is the 10 001st prime number?"""
 
 
-def primes(limit):
+def generate_primes(limit):
     if limit < 2:
         return []
     a = [True] * (limit + 1)
@@ -17,4 +17,4 @@ def primes(limit):
                 a[n] = False
 
 if __name__ == "__main__":
-    print(list(primes(200000))[10000])
+    print(list(generate_primes(200000))[10000])

@@ -1,6 +1,6 @@
-from tasks.task7 import primes
+from tasks.task7 import generate_primes
 
-primes_set = set(primes(100000))
+primes_set = set(generate_primes(100000))
 
 
 def count_primes(a, b):

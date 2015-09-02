@@ -1,3 +1,3 @@
-from tasks.task7 import primes
+from tasks.task7 import generate_primes
 
-print(sum(primes(2000000)))
+print(sum(generate_primes(2000000)))
