@@ -16,17 +16,14 @@ from tasks.task22 import word_value
 
 
 def triangle_numbers(limit):
-    triangle = 0
-    step = 1
-    while triangle + step <= limit:
-        triangle += step
-        yield triangle
-        step += 1
+    return ((x * (x + 1) // 2) for x in range(1, limit))
 
 
-with open("task42_words.txt") as f:
-    s = f.read()
-    words = s[1:-1].split('","')
-    triangles = set(triangle_numbers(200))
-    triangle_words = [word for word in words if word_value(word) in triangles]
-    print(len(triangle_words))
+if __name__ == "__main__":
+    with open("task42_words.txt") as f:
+        s = f.read()
+        words = s[1:-1].split('","')
+        triangles = set(triangle_numbers(200))
+        triangle_words = [word for word in words if
+                          word_value(word) in triangles]
+        print(len(triangle_words))
