@@ -16,14 +16,7 @@ from tasks.task7 import generate_primes
 
 limit = 10000
 primes = set(generate_primes(limit))
-composites = [n for n in range(2, limit) if n not in primes and n % 2 != 0]
+odd_composites = [n for n in range(2, limit) if n not in primes and n % 2 != 0]
 
-for n in composites:
-    ok = False
-    for i in range(1, int(n ** 0.5)):
-        if n - 2 * (i ** 2) in primes:
-            ok = True
-
-    if not ok:
-        print(n, i, n - 2 * (i ** 2))
-
+print(next(n for n in odd_composites if all(
+    n - 2 * i ** 2 not in primes for i in range(1, int(n ** 0.5)))))
