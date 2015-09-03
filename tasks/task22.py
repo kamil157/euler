@@ -11,11 +11,12 @@ would obtain a score of 938 × 53 = 49714.
 What is the total of all the name scores in the file?"""
 
 
-def value(name):
-    return sum(ord(c) - ord('A') + 1 for c in name)
+def word_value(word):
+    return sum(ord(c) - ord('A') + 1 for c in word)
 
-with open("task22_names.txt") as f:
-    s = f.read()
-    names = s[1:-1].split('","')
+if __name__ == '__main__':
+    with open("task22_names.txt") as f:
+        s = f.read()
+        names = s[1:-1].split('","')
 
-print(sum((i + 1) * value(name) for i, name in enumerate(sorted(names))))
+    print(sum((i + 1) * word_value(name) for i, name in enumerate(sorted(names))))
