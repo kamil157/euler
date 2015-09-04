@@ -6,7 +6,7 @@ There are thirteen such primes below 100:
 
 How many circular primes are there below one million?"""
 
-from tasks.task7 import generate_primes
+from helpers.math_helper import generate_primes
 
 
 def generate_circulars():

@@ -3,9 +3,5 @@ from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 Find the largest palindrome made from the product of two 3-digit numbers."""
 
-
-def is_palindrome(n):
-    s = str(n)
-    return s == s[::-1]
-
-print(max(i * j for i in range(100, 1000) for j in range(100, 1000) if is_palindrome(i * j)))
+r = range(100, 1000)
+print(max(i * j for i in r for j in r if str(i * j) == str(i * j)[::-1]))

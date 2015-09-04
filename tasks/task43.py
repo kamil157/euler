@@ -15,7 +15,7 @@ d8d9d10=289 is divisible by 17
 Find the sum of all 0 to 9 pandigital numbers with this property."""
 from itertools import permutations
 
-from tasks.task7 import generate_primes
+from helpers.math_helper import generate_primes
 
 
 def pandigitals():

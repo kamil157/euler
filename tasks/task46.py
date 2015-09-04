@@ -12,7 +12,7 @@ It turns out that the conjecture was false.
 
 What is the smallest odd composite that cannot be written as the sum
 of a prime and twice a square?"""
-from tasks.task7 import generate_primes
+from helpers.math_helper import generate_primes
 
 limit = 10000
 primes = set(generate_primes(limit))

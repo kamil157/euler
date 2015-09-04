@@ -8,7 +8,7 @@ to right and right to left.
 
 NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes."""
 
-from tasks.task7 import generate_primes
+from helpers.math_helper import generate_primes
 
 primes = set(generate_primes(1000000))
 

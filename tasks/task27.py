@@ -1,4 +1,4 @@
-from tasks.task7 import generate_primes
+from helpers.math_helper import generate_primes
 
 primes_set = set(generate_primes(100000))
 

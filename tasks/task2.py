@@ -6,15 +6,7 @@ two terms. By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms."""
 
-
-from functools import lru_cache
-
-
-@lru_cache(maxsize=None)
-def fib(n):
-    if n < 2:
-        return n
-    return fib(n - 1) + fib(n - 2)
+from helpers.math_helper import fib
 
 if __name__ == '__main__':
     print(sum(fib(i) for i in range(100) if fib(i) % 2 == 0 and fib(i) < 4000000))
