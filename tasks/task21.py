@@ -9,7 +9,7 @@ and 142; so d(284) = 220.
 
 Evaluate the sum of all the amicable numbers under 10000."""
 
-from tasks.task12 import divisors
+from helpers.math_helper import divisors
 
 
 def d(n):

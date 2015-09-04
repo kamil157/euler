@@ -13,13 +13,20 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million."""
 from functools import lru_cache
 
+
 @lru_cache(maxsize=None)
 def chain(n):
     if n <= 1:
         return 1
     if n % 2 == 0:
-        return 1 + chain(int(n/2))
+        return 1 + chain(int(n / 2))
     else:
         return 1 + chain(3 * n + 1)
 
-print(max([(chain(i), i) for i in range(1000000)]))
+
+def task14():
+    return max([(chain(i), i) for i in range(1000000)])[1]
+
+
+if __name__ == '__main__':
+    print(task14())

@@ -15,5 +15,11 @@ How many Sundays fell on the first of the month during the twentieth century
 
 import calendar
 
-print(sum(1 for y in range(1901, 2001) for m in range(1, 13)
-          if calendar.weekday(y, m, 1) == 6))
+
+def task19():
+    return sum(1 for y in range(1901, 2001) for m in range(1, 13)
+               if calendar.weekday(y, m, 1) == 6)
+
+
+if __name__ == '__main__':
+    print(task19())

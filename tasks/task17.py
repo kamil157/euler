@@ -9,7 +9,6 @@ NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and
 forty-two) contains 23 letters and 115 (one hundred and fifteen) contains
 20 letters. The use of "and" when writing out numbers is in compliance with
 British usage."""
-
 words = {
     0: '',
     1: 'one',
@@ -54,9 +53,16 @@ def letters(n):
         if n % 100 == 0:
             return letters(n / 100) + len('hundred')
         else:
-            return letters(n - n % 100) + letters(n % 100) + len('and')
+            return letters(n - n % 100) + letters(n % 100) + len(
+                'and')
     if n == 1000:
         return len('onethousand')
     raise NotImplementedError
 
-print(sum(letters(i) for i in range(1001)))
+
+def task17():
+    return sum(letters(i) for i in range(1001))
+
+
+if __name__ == '__main__':
+    print(task17())

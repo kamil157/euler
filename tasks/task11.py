@@ -58,10 +58,9 @@ def read_numbers(string):
 
 numbers = read_numbers(input)
 
-if __name__ == "__main__":
 
+def task11():
     deltas = [(1, 1), (1, 0), (1, -1), (0, 1)]
-
     l = []
     for x in range(len(numbers)):
         for y in range(len(numbers[x])):
@@ -73,5 +72,8 @@ if __name__ == "__main__":
                     if 0 <= new_x < len(numbers) and 0 <= new_y < len(numbers):
                         prod *= numbers[new_x][new_y]
                 l.append(prod)
+    return max(l)
 
-    print(max(l))
+
+if __name__ == "__main__":
+    print(task11())

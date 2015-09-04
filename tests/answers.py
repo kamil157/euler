@@ -1,29 +1,42 @@
 import unittest
 
-from tasks.task1 import task1
-from tasks.task2 import task2
-from tasks.task3 import task3
-from tasks.task4 import task4
-from tasks.task5 import task5
-from tasks.task6 import task6
-from tasks.task7 import task7
-from tasks.task8 import task8
-from tasks.task9 import task9
-from tasks.task10 import task10
+answers = {
+    1: 233168,
+    2: 4613732,
+    3: 6857,
+    4: 906609,
+    5: 232792560,
+    6: 25164150,
+    7: 104743,
+    8: 23514624000,
+    9: 31875000,
+    10: 142913828922,
+    11: 70600674,
+    13: 5537376230,
+    15: 137846528820,
+    16: 1366,
+    17: 21124,
+    18: 1074,
+    19: 171,
+    20: 648
+}
+
+answers_slow = {
+    12: 76576500,
+    14: 837799
+}
 
 
 class Test(unittest.TestCase):
     def test_answers(self):
-        self.assertEqual(task1(), 233168)
-        self.assertEqual(task2(), 4613732)
-        self.assertEqual(task3(), 6857)
-        self.assertEqual(task4(), 906609)
-        self.assertEqual(task5(), 232792560)
-        self.assertEqual(task6(), 25164150)
-        self.assertEqual(task7(), 104743)
-        self.assertEqual(task8(), 23514624000)
-        self.assertEqual(task9(), 31875000)
-        self.assertEqual(task10(), 142913828922)
+        for i, answer in answers.items():
+            exec("from tasks.task{i} import task{i}".format(i=i))
+            self.assertEqual(eval("task" + str(i))(), answer)
+
+    def test_answers_slow(self):
+        for i, answer in answers_slow.items():
+            exec("from tasks.task{i} import task{i}".format(i=i))
+            self.assertEqual(eval("task" + str(i))(), answer)
 
 
 if __name__ == '__main__':

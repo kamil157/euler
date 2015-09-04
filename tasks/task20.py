@@ -7,4 +7,10 @@ Find the sum of the digits in the number 100!"""
 
 from math import factorial
 
-print(sum(int(digit) for digit in str(factorial(100))))
+
+def task20():
+    return sum(int(digit) for digit in str(factorial(100)))
+
+
+if __name__ == '__main__':
+    print(task20())

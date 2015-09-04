@@ -203,4 +203,10 @@ input = """
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
-print(str(sum([int(s) for s in input.split()]))[:10])
+
+def task13():
+    return int(str(sum([int(s) for s in input.split()]))[:10])
+
+
+if __name__ == '__main__':
+    print(task13())
