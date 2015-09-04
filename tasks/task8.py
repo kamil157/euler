@@ -34,7 +34,12 @@ number = "7316717653133062491922511967442657474235534919493496983520312774506326
 def product(range):
     return functools.reduce(operator.mul, map(int, range), 1)
 
+
 def max_product(n, k):
     return max([product(n[i:i + k]) for i in range(len(n) - k + 1)])
 
-print(max_product(number, 13))
+def task8():
+    return max_product(number, 13)
+
+if __name__ == '__main__':
+    print(task8())

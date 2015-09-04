@@ -3,4 +3,10 @@
 What is the largest prime factor of the number 600851475143 ?"""
 from helpers.math_helper import prime_factors
 
-print(max(prime_factors(600851475143)))
+
+def task3():
+    return max(prime_factors(600851475143))
+
+
+if __name__ == '__main__':
+    print(task3())

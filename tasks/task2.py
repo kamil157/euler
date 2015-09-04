@@ -8,5 +8,11 @@ four million, find the sum of the even-valued terms."""
 
 from helpers.math_helper import fib
 
+
+def task2():
+    return sum(
+        fib(i) for i in range(100) if fib(i) % 2 == 0 and fib(i) < 4000000)
+
+
 if __name__ == '__main__':
-    print(sum(fib(i) for i in range(100) if fib(i) % 2 == 0 and fib(i) < 4000000))
+    print(task2())

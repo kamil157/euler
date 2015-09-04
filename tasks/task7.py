@@ -4,5 +4,10 @@ that the 6th prime is 13.
 What is the 10 001st prime number?"""
 from helpers.math_helper import generate_primes
 
+
+def task7():
+    return list(generate_primes(200000))[10000]
+
+
 if __name__ == "__main__":
-    print(list(generate_primes(200000))[10000])
+    print(task7())

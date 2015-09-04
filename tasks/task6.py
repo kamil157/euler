@@ -10,5 +10,11 @@ numbers and the square of the sum is 3025 − 385 = 2640.
 Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum."""
 
-r = range(101)
-print(sum(r) ** 2 - sum(i ** 2 for i in r))
+
+def task6():
+    r = range(101)
+    return sum(r) ** 2 - sum(i ** 2 for i in r)
+
+
+if __name__ == '__main__':
+    print(task6())
