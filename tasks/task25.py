@@ -21,8 +21,13 @@ What is the index of the first term in the Fibonacci sequence to contain 1000
 digits?"""
 from helpers.math_helper import fib
 
-i = 1
-while len(str(fib(i))) < 1000:
-    i += 1
 
-print(i)
+def task25():
+    i = 1
+    while len(str(fib(i))) < 1000:
+        i += 1
+    return i
+
+
+if __name__ == '__main__':
+    print(task25())

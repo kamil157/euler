@@ -35,4 +35,9 @@ def cycle_length(limit):
         yield count_cycle(d), d
 
 
-print(max(cycle_length(1000)))
+def task26():
+    return max(cycle_length(1000))[1]
+
+
+if __name__ == '__main__':
+    print(task26())

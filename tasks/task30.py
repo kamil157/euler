@@ -11,5 +11,11 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 Find the sum of all the numbers that can be written as the sum of fifth powers
 of their digits."""
 
-print(sum(n for n in range(10, 6 * 9 ** 5)
-          if n == sum(int(d) ** 5 for d in str(n))))
+
+def task30():
+    return sum(n for n in range(10, 6 * 9 ** 5)
+               if n == sum(int(d) ** 5 for d in str(n)))
+
+
+if __name__ == '__main__':
+    print(task30())

@@ -19,12 +19,9 @@ of two abundant numbers."""
 
 from tasks.task21 import d as divisor_sum
 
-limit = 28123
-
-abundant_numbers = [i for i in range(2, limit + 1) if divisor_sum(i) > i]
-
 
 def not_two_abundant(limit):
+    abundant_numbers = [i for i in range(2, limit + 1) if divisor_sum(i) > i]
     numbers = set()
     for i, n in enumerate(abundant_numbers):
         for m in abundant_numbers[i:]:
@@ -37,5 +34,10 @@ def not_two_abundant(limit):
     return numbers
 
 
+def task23():
+    limit = 28123
+    return sum((set(range(1, limit)) - not_two_abundant(limit)))
+
+
 if __name__ == "__main__":
-    print(sum((set(range(1, limit)) - not_two_abundant(limit))))
+    print(task23())

@@ -18,13 +18,14 @@ def d(n):
     return sum(div)
 
 
-if __name__ == "__main__":
+def task21():
     total = 0
     for a in range(2, 10000):
         b = d(a)
         if d(b) == a and a != b:
             total += a
+    return total
 
-    print(total)
 
-    # print(sum([n for n in range(2, 10000) if d(d(n)) == n and n != d(n)]))
+if __name__ == "__main__":
+    print(task21())

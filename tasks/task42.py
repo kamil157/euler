@@ -20,7 +20,7 @@ def triangle_numbers(limit):
 
 
 if __name__ == "__main__":
-    with open("task42_words.txt") as f:
+    with open("../res/task42_words.txt") as f:
         s = f.read()
         words = s[1:-1].split('","')
         triangles = set(triangle_numbers(200))

@@ -17,12 +17,18 @@ def sum_diagonals(n):
     k = 1
     result = k
 
-    for i in range(1, n):
+    for i in range(1, n + 1):
         for _ in range(4):
             k += 2 * i
             result += k
 
     return result
 
-size = 1001
-print(sum_diagonals((size - 1) // 2))
+
+def task28():
+    size = 1001
+    return sum_diagonals((size - 1) // 2)
+
+
+if __name__ == '__main__':
+    print(task28())

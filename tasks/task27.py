@@ -1,19 +1,24 @@
 from helpers.math_helper import generate_primes
 
-primes_set = set(generate_primes(100000))
 
-
-def count_primes(a, b):
+def count_primes(a, b, primes):
     n = 0
-    while n * n + a * n + b in primes_set:
+    while n * n + a * n + b in primes:
         n += 1
     return n
 
 
 def get_counts():
+    primes = set(generate_primes(100000))
     for a in range(-999, 1000, 2):
         for b in range(-999, 1000, 2):
-            yield count_primes(a, b), a, b
+            yield count_primes(a, b, primes), a, b
 
-count, a, b = max(get_counts())
-print(a * b)
+
+def task27():
+    count, a, b = max(get_counts())
+    return a * b
+
+
+if __name__ == '__main__':
+    print(task27())

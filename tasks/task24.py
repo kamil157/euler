@@ -10,5 +10,10 @@ What is the millionth lexicographic permutation of the digits
 
 from itertools import permutations
 
-print(''.join(list(permutations('0123456789'))[999999]))
 
+def task24():
+    return int(''.join(list(permutations('0123456789'))[999999]))
+
+
+if __name__ == '__main__':
+    print(task24())

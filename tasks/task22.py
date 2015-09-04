@@ -14,9 +14,14 @@ What is the total of all the name scores in the file?"""
 def word_value(word):
     return sum(ord(c) - ord('A') + 1 for c in word)
 
-if __name__ == '__main__':
-    with open("task22_names.txt") as f:
+
+def task22():
+    with open("../res/task22_names.txt") as f:
         s = f.read()
         names = s[1:-1].split('","')
+    return sum((i + 1) * word_value(name)
+               for i, name in enumerate(sorted(names)))
 
-    print(sum((i + 1) * word_value(name) for i, name in enumerate(sorted(names))))
+
+if __name__ == '__main__':
+    print(task22())
