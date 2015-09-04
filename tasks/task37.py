@@ -10,10 +10,9 @@ NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes."""
 
 from helpers.math_helper import generate_primes
 
-primes = set(generate_primes(1000000))
-
 
 def truncatables():
+    primes = set(generate_primes(1000000))
     for n in primes:
         if n > 10:
             is_truncatable = True
@@ -26,4 +25,9 @@ def truncatables():
                 yield n
 
 
-print(sum(truncatables()))
+def task37():
+    return sum(truncatables())
+
+
+if __name__ == '__main__':
+    print(task37())

@@ -26,7 +26,12 @@ find the value of the denominator."""
 from functools import reduce
 import operator
 
-l = [a / b for a in range(10, 100) for b in range(a + 1, 100) if
-     b % 10 != 0 and a % 10 == b // 10 and (a // 10) / (b % 10) == a / b]
 
-print(round(1 / reduce(operator.mul, l, 1)))
+def task33():
+    l = [a / b for a in range(10, 100) for b in range(a + 1, 100) if
+         b % 10 != 0 and a % 10 == b // 10 and (a // 10) / (b % 10) == a / b]
+    return round(1 / reduce(operator.mul, l, 1))
+
+
+if __name__ == '__main__':
+    print(task33())

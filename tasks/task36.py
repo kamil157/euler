@@ -16,4 +16,9 @@ def generate_palindromes():
                 yield n
 
 
-print(sum(generate_palindromes()))
+def task36():
+    return sum(generate_palindromes())
+
+
+if __name__ == '__main__':
+    print(task36())

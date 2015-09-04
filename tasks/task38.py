@@ -25,4 +25,9 @@ def pandigital_products():
             yield concat_prod
 
 
-print(max(pandigital_products()))
+def task38():
+    return int(max(pandigital_products()))
+
+
+if __name__ == '__main__':
+    print(task38())

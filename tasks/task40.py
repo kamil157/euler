@@ -12,10 +12,15 @@ d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000"""
 from functools import reduce
 from operator import mul
 
-s = ''
-n = 0
-while len(s) <= 1000000:
-    s += str(n)
-    n += 1
 
-print(reduce(mul, [int(s[10 ** i]) for i in range(7)], 1))
+def task40():
+    s = ''
+    n = 0
+    while len(s) <= 1000000:
+        s += str(n)
+        n += 1
+    return reduce(mul, [int(s[10 ** i]) for i in range(7)], 1)
+
+
+if __name__ == '__main__':
+    print(task40())

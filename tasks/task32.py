@@ -12,10 +12,15 @@ HINT: Some products can be obtained in more than one way so be sure to only
 include it once in your sum."""
 
 
-l = set()
-for a in range(1, 100):
-    for b in range(a, 10000):
-        digits = "".join(sorted(str(a * b) + str(a) + str(b)))
-        if digits == '123456789':
-            l.add(a * b)
-print(sum(l))
+def task32():
+    l = set()
+    for a in range(1, 100):
+        for b in range(a, 10000):
+            digits = "".join(sorted(str(a * b) + str(a) + str(b)))
+            if digits == '123456789':
+                l.add(a * b)
+    return sum(l)
+
+
+if __name__ == '__main__':
+    print(task32())

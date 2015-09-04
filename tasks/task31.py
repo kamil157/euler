@@ -7,14 +7,17 @@ It is possible to make £2 in the following way:
 1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p
 How many different ways can £2 be made using any number of coins?"""
 
-coins = [1, 2, 5, 10, 20, 50, 100, 200]
 
-target = 1000
-a = [0] * (target + 1)
-a[0] = 1
+def task31():
+    coins = [1, 2, 5, 10, 20, 50, 100, 200]
+    target = 200
+    a = [0] * (target + 1)
+    a[0] = 1
+    for coin in coins:
+        for i in range(coin, target + 1):
+            a[i] += a[i - coin]
+    return a[target]
 
-for coin in coins:
-    for i in range(coin, target + 1):
-        a[i] += a[i - coin]
 
-print(a[target])
+if __name__ == '__main__':
+    print(task31())

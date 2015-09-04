@@ -6,5 +6,11 @@ their digits.
 Note: as 1! = 1 and 2! = 2 are not sums they are not included."""
 from math import factorial
 
-print(sum((n for n in range(10, 100000) if
-           n == sum(factorial(int(d)) for d in str(n)))))
+
+def task34():
+    return sum((n for n in range(10, 100000) if
+               n == sum(factorial(int(d)) for d in str(n))))
+
+
+if __name__ == '__main__':
+    print(task34())

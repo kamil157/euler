@@ -17,4 +17,9 @@ def triangle_sides():
         yield len(l), p
 
 
-print(max(triangle_sides()))
+def task39():
+    return max(triangle_sides())[1]
+
+
+if __name__ == '__main__':
+    print(task39())

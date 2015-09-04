@@ -9,7 +9,7 @@ How many circular primes are there below one million?"""
 from helpers.math_helper import generate_primes
 
 
-def generate_circulars():
+def generate_circulars(primes):
     for p in primes:
         s = str(p)
         is_circular = True
@@ -21,6 +21,10 @@ def generate_circulars():
             yield p
 
 
-primes = set(generate_primes(1000000))
+def task35():
+    primes = set(generate_primes(1000000))
+    return len(list(generate_circulars(primes)))
 
-print(len(list(generate_circulars())))
+
+if __name__ == '__main__':
+    print(task35())
