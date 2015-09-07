@@ -14,7 +14,8 @@ of D?"""
 def pentagonal(n):
     return (i * (3 * i - 1) // 2 for i in range(1, n))
 
-if __name__ == "__main__":
+
+def task44():
     limit = 10000
     l = list(pentagonal(limit))
     s = set(pentagonal(limit))
@@ -23,4 +24,8 @@ if __name__ == "__main__":
             d = l[j] - l[i]
             n = l[j] + l[i]
             if d in s and n in s:
-                print(d)
+                return d
+
+
+if __name__ == "__main__":
+    print(task44())

@@ -15,7 +15,11 @@ def hexagonal(limit):
     return ((x * (2 * x - 1)) for x in range(1, limit))
 
 
-pentagons = set(pentagonal(100000))
-hexagons = set(hexagonal(10000))
+def task45():
+    pentagons = set(pentagonal(100000))
+    hexagons = set(hexagonal(100000))
+    return next(n for n in pentagons & hexagons if n > 40755)
 
-print(pentagons & hexagons)
+
+if __name__ == '__main__':
+    print(task45())

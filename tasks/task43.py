@@ -30,4 +30,9 @@ def pandigitals():
             yield int(''.join(perm))
 
 
-print(sum(pandigitals()))
+def task43():
+    return sum(pandigitals())
+
+
+if __name__ == '__main__':
+    print(task43())

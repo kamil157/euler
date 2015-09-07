@@ -19,11 +19,15 @@ def triangle_numbers(limit):
     return ((x * (x + 1) // 2) for x in range(1, limit))
 
 
-if __name__ == "__main__":
+def task42():
     with open("../res/task42_words.txt") as f:
         s = f.read()
         words = s[1:-1].split('","')
         triangles = set(triangle_numbers(200))
         triangle_words = [word for word in words if
                           word_value(word) in triangles]
-        print(len(triangle_words))
+        return len(triangle_words)
+
+
+if __name__ == "__main__":
+    print(task42())
