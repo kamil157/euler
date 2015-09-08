@@ -38,3 +38,19 @@ def divisors(n):
             factors.add(i)
             factors.add(n // i)
     return factors
+
+
+def spiral(n):
+    k = 1
+    yield k
+
+    for i in range(1, n + 1):
+        for _ in range(4):
+            k += 2 * i
+            yield k
+
+
+def is_prime(n):
+    if n % 2 == 0 and n > 2 or n < 2:
+        return False
+    return all(n % i for i in range(3, int(n ** 0.5) + 1, 2))

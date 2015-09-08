@@ -5,11 +5,7 @@ and is also prime.
 What is the largest n-digit pandigital prime that exists?"""
 from itertools import permutations
 
-
-def is_prime(n):
-    if n % 2 == 0 and n > 2 or n < 2:
-        return False
-    return all(n % i for i in range(3, int(n ** 0.5) + 1, 2))
+from helpers.math_helper import is_prime
 
 
 def pandigitals():

@@ -11,23 +11,12 @@ It can be verified that the sum of the numbers on the diagonals is 101.
 
 What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral
 formed in the same way?"""
-
-
-def sum_diagonals(n):
-    k = 1
-    result = k
-
-    for i in range(1, n + 1):
-        for _ in range(4):
-            k += 2 * i
-            result += k
-
-    return result
+from helpers.math_helper import spiral
 
 
 def task28():
     size = 1001
-    return sum_diagonals((size - 1) // 2)
+    return sum(spiral((size - 1) // 2))
 
 
 if __name__ == '__main__':
