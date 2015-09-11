@@ -1,4 +1,5 @@
-from functools import lru_cache
+from functools import lru_cache, reduce
+from operator import mul
 
 
 @lru_cache(maxsize=None)
@@ -63,3 +64,15 @@ def partitions(coins, target):
         for i in range(coin, target + 1):
             a[i] += a[i - coin]
     return a[target]
+
+
+def prod(s):
+    return reduce(mul, s, 1)
+
+
+def resilience(n):
+    return phi(n) / (n - 1)
+
+
+def phi(n):
+    return int(n * prod(1 - 1 / p for p in set(prime_factors(n))))
