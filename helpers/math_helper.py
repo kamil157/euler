@@ -54,3 +54,12 @@ def is_prime(n):
     if n % 2 == 0 and n > 2 or n < 2:
         return False
     return all(n % i for i in range(3, int(n ** 0.5) + 1, 2))
+
+
+def partitions(coins, target):
+    a = [0] * (target + 1)
+    a[0] = 1
+    for coin in coins:
+        for i in range(coin, target + 1):
+            a[i] += a[i - coin]
+    return a[target]
