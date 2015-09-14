@@ -3,8 +3,7 @@ import unittest
 from helpers.math_helper import fib, prime_factors, generate_primes, divisors
 
 
-class Test(unittest.TestCase):
-
+class TestMathHelper(unittest.TestCase):
     def test_fib(self):
         self.assertEqual(fib(0), 0)
         self.assertEqual(fib(1), 1)
@@ -24,7 +23,8 @@ class Test(unittest.TestCase):
         self.assertEqual(list(prime_factors(8)), [2, 2, 2])
         self.assertEqual(list(prime_factors(12)), [2, 2, 3])
         self.assertEqual(list(prime_factors(13195)), [5, 7, 13, 29])
-        self.assertEqual(list(prime_factors(600851475143)), [71, 839, 1471, 6857])
+        self.assertEqual(list(prime_factors(600851475143)),
+                         [71, 839, 1471, 6857])
 
     def test_primes(self):
         self.assertEqual(list(generate_primes(0)), [])
@@ -36,7 +36,8 @@ class Test(unittest.TestCase):
         self.assertEqual(list(generate_primes(6)), [2, 3, 5])
         self.assertEqual(list(generate_primes(7)), [2, 3, 5, 7])
         self.assertEqual(list(generate_primes(13)), [2, 3, 5, 7, 11, 13])
-        self.assertEqual(list(generate_primes(25)), [2, 3, 5, 7, 11, 13, 17, 19, 23])
+        self.assertEqual(list(generate_primes(25)),
+                         [2, 3, 5, 7, 11, 13, 17, 19, 23])
 
     def test_divisors(self):
         self.assertEqual(divisors(0), set())
@@ -45,6 +46,3 @@ class Test(unittest.TestCase):
         self.assertEqual(divisors(4), {1, 2, 4})
         self.assertEqual(divisors(6), {1, 2, 3, 6})
         self.assertEqual(divisors(12), {1, 2, 3, 4, 6, 12})
-
-if __name__ == '__main__':
-    unittest.main()

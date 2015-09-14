@@ -76,7 +76,7 @@ answers_slow = {
 }
 
 
-class Test(unittest.TestCase):
+class TestAnswers(unittest.TestCase):
     def test_answers(self):
         for i, answer in answers.items():
             exec("from tasks.task{i} import task{i}".format(i=i))
@@ -87,6 +87,3 @@ class Test(unittest.TestCase):
             exec("from tasks.task{i} import task{i}".format(i=i))
             self.assertEqual(eval("task" + str(i))(), answer)
 
-
-if __name__ == '__main__':
-    unittest.main()

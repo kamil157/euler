@@ -3,7 +3,7 @@ import unittest
 from tasks.task17 import letters
 
 
-class Test(unittest.TestCase):
+class Test17(unittest.TestCase):
     def test_letters(self):
         self.assertEqual(letters(0), len(""))
         self.assertEqual(letters(1), len("one"))
@@ -29,6 +29,3 @@ class Test(unittest.TestCase):
         self.assertEqual(letters(999), len("ninehundredandninetynine"))
         self.assertEqual(letters(1000), len("onethousand"))
 
-
-if __name__ == '__main__':
-    unittest.main()
