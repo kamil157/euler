@@ -1,6 +1,6 @@
 import unittest
 
-answers = {
+answers_fast = {
     1: 233168,
     2: 4613732,
     3: 6857,
@@ -77,13 +77,14 @@ answers_slow = {
 
 
 class TestAnswers(unittest.TestCase):
-    def test_answers(self):
+
+    def test_answers_fast(self):
+        self.run_tests(answers_fast)
+
+    def test_answers_slow(self):
+        self.run_tests(answers_slow)
+
+    def run_tests(self, answers):
         for i, answer in answers.items():
             exec("from tasks.task{i} import task{i}".format(i=i))
             self.assertEqual(eval("task" + str(i))(), answer)
-
-    def test_answers_slow(self):
-        for i, answer in answers_slow.items():
-            exec("from tasks.task{i} import task{i}".format(i=i))
-            self.assertEqual(eval("task" + str(i))(), answer)
-
