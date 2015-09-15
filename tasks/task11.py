@@ -27,7 +27,7 @@ The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20×20 grid?"""
 
-input = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+grid_string = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
 52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
@@ -49,30 +49,29 @@ input = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
 
 
-def read_numbers(string):
+def read_grid(string):
     lines = string.split('\n')
-    strings = [line.split() for line in lines]
-    values = [[int(x) for x in line] for line in strings]
-    return values
-
-
-numbers = read_numbers(input)
+    values = [line.split() for line in lines]
+    return [[int(n) for n in line] for line in values]
 
 
 def task11():
+    grid = read_grid(grid_string)
+    return max(products(grid))
+
+
+def products(grid):
     deltas = [(1, 1), (1, 0), (1, -1), (0, 1)]
-    l = []
-    for x in range(len(numbers)):
-        for y in range(len(numbers[x])):
+    for x in range(len(grid)):
+        for y in range(len(grid[x])):
             for dx, dy in deltas:
                 prod = 1
                 for i in range(4):
                     new_x = x + i * dx
                     new_y = y + i * dy
-                    if 0 <= new_x < len(numbers) and 0 <= new_y < len(numbers):
-                        prod *= numbers[new_x][new_y]
-                l.append(prod)
-    return max(l)
+                    if 0 <= new_x < len(grid) and 0 <= new_y < len(grid):
+                        prod *= grid[new_x][new_y]
+                yield prod
 
 
 if __name__ == "__main__":

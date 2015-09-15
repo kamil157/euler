@@ -31,7 +31,7 @@ by trying every route. However, Problem 67, is the same challenge with
 a triangle containing one-hundred rows; it cannot be solved by brute force,
 and requires a clever method! ;o)"""
 
-from tasks.task11 import read_numbers
+from tasks.task11 import read_grid
 
 
 def get_total(tree):
@@ -58,7 +58,7 @@ def task18():
     63 66 04 68 89 53 67 30 73 16 69 87 40 31
     04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"""
 
-    return get_total(read_numbers(input))
+    return get_total(read_grid(input))
 
 
 if __name__ == '__main__':
