@@ -13,12 +13,14 @@ unless it is divisible by 400.
 How many Sundays fell on the first of the month during the twentieth century
 (1 Jan 1901 to 31 Dec 2000)?"""
 
-import calendar
+from calendar import weekday
 
 
 def task19():
-    return sum(1 for y in range(1901, 2001) for m in range(1, 13)
-               if calendar.weekday(y, m, 1) == 6)
+    sunday = 6
+    months = 12
+    return sum(1 for y in range(1901, 2001) for m in range(1, months + 1)
+               if weekday(y, m, 1) == sunday)
 
 
 if __name__ == '__main__':

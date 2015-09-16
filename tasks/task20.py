@@ -9,7 +9,7 @@ from math import factorial
 
 
 def task20():
-    return sum(int(digit) for digit in str(factorial(100)))
+    return sum(int(d) for d in str(factorial(100)))
 
 
 if __name__ == '__main__':

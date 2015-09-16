@@ -76,3 +76,16 @@ def resilience(n):
 
 def phi(n):
     return int(n * prod(1 - 1 / p for p in set(prime_factors(n))))
+
+
+def read_grid(string):
+    lines = string.split('\n')
+    values = [line.split() for line in lines]
+    return [[int(n) for n in line] for line in values]
+
+
+def get_max_path(tree):
+    for row in reversed(range(len(tree) - 1)):
+        for col in range(row + 1):
+            tree[row][col] += max(tree[row + 1][col], tree[row + 1][col + 1])
+    return tree[0][0]
