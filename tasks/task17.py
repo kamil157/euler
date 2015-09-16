@@ -20,7 +20,7 @@ def count_letters(n):
 
 
 def task17():
-    return sum(count_letters(i) for i in range(1001))
+    return sum(count_letters(i) for i in range(1, 1001))
 
 
 if __name__ == '__main__':
