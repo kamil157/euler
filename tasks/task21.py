@@ -13,18 +13,18 @@ from helpers.math_helper import divisors
 
 
 def d(n):
-    div = divisors(n)
-    div.remove(n)
-    return sum(div)
+    return sum(divisors(n)) - n
+
+
+def amicable(limit):
+    for a in range(2, limit):
+        b = d(a)
+        if d(b) == a and a != b:
+            yield a
 
 
 def task21():
-    total = 0
-    for a in range(2, 10000):
-        b = d(a)
-        if d(b) == a and a != b:
-            total += a
-    return total
+    return sum(amicable(10000))
 
 
 if __name__ == "__main__":

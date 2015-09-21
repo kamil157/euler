@@ -16,9 +16,8 @@ def word_value(word):
 
 
 def task22():
-    with open("../res/task22_names.txt") as f:
-        s = f.read()
-        names = s[1:-1].split('","')
+    with open("../res/task22_names.txt") as file:
+        names = file.read()[1:-1].split('","')
     return sum((i + 1) * word_value(name)
                for i, name in enumerate(sorted(names)))
 
