@@ -17,26 +17,19 @@ numbers is less than this limit.
 Find the sum of all the positive integers which cannot be written as the sum
 of two abundant numbers."""
 
-from tasks.task21 import d as divisor_sum
-
-
-def not_two_abundant(limit):
-    abundant_numbers = [i for i in range(2, limit + 1) if divisor_sum(i) > i]
-    numbers = set()
-    for i, n in enumerate(abundant_numbers):
-        for m in abundant_numbers[i:]:
-            k = n + m
-            if k <= limit:
-                if k not in numbers:
-                    numbers.add(k)
-            else:
-                break
-    return numbers
+from helpers.math_helper import divisor_sum
 
 
 def task23():
-    limit = 28123
-    return sum((set(range(1, limit)) - not_two_abundant(limit)))
+    # Every number greater than 20161 can be expressed
+    # as a sum of two abundant numbers.
+    limit = 20161
+    abundants = set(i for i in range(1, limit + 1) if divisor_sum(i) > i)
+
+    def abundant_sum(i):
+        return any(i - a in abundants for a in abundants)
+
+    return sum(i for i in range(1, limit + 1) if not abundant_sum(i))
 
 
 if __name__ == "__main__":

@@ -96,3 +96,7 @@ def get_max_path(tree):
         for col in range(row + 1):
             tree[row][col] += max(tree[row + 1][col], tree[row + 1][col + 1])
     return tree[0][0]
+
+
+def divisor_sum(n):
+    return sum(divisors(n)) - n
