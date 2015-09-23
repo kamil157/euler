@@ -30,13 +30,8 @@ def count_cycle(d):
     return len(remainders) - remainders.index(r)
 
 
-def cycle_length(limit):
-    for d in range(2, limit):
-        yield count_cycle(d), d
-
-
 def task26():
-    return max(cycle_length(1000))[1]
+    return max((count_cycle(d), d) for d in range(2, 1000))[1]
 
 
 if __name__ == '__main__':

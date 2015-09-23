@@ -13,6 +13,9 @@ of their digits."""
 
 
 def task30():
+    # The maximum value for one digit is 9 ^ 5 = 59049. For 7 digits, the
+    # maximum sum would be 7 * 59049 = 413343, which doesn't even come close
+    # to 1234567. Therefore the limit is 6 * 9 ^ 5.
     return sum(n for n in range(10, 6 * 9 ** 5)
                if n == sum(int(d) ** 5 for d in str(n)))
 

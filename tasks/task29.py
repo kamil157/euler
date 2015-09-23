@@ -14,8 +14,7 @@ and 2 ≤ b ≤ 100?"""
 
 
 def task29():
-    limit = 100
-    r = range(2, limit + 1)
+    r = range(2, 101)
     return len(set((a ** b for a in r for b in r)))
 
 
