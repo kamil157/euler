@@ -9,28 +9,22 @@ than one in value, and containing two digits in the numerator and denominator.
 
 If the product of these four fractions is given in its lowest common terms,
 find the value of the denominator."""
+from fractions import Fraction
 
-# l = []
-# delta = 0.00001
-# for a in range(10, 100):
-# for b in range(a + 1, 100):
-#         if int(str(b)[1]) != 0:
-#             for i in range(2):
-#                 for j in range(2):
-#                     y = int(str(a)[i]) / int(str(b)[j])
-#                     if int(str(a)[i-1]) == int(str(b)[j-1]):
-#                         if abs(y - a / b) < delta:
-#                             l.append((a, b))
-#
-# print(l)
-from functools import reduce
-import operator
+from helpers.math_helper import prod
 
 
 def task33():
-    l = [a / b for a in range(10, 100) for b in range(a + 1, 100) if
-         b % 10 != 0 and a % 10 == b // 10 and (a // 10) / (b % 10) == a / b]
-    return round(1 / reduce(operator.mul, l, 1))
+    fractions = (Fraction(a, b)
+                 for a in range(10, 100)
+                 for b in range(a + 1, 100)
+                 # non trivial
+                 if b % 10 != 0
+                 # can be incorrectly simplified
+                 if a % 10 == b // 10
+                 # incorrectly simplified == correctly simplified
+                 if a / b == (a // 10) / (b % 10))
+    return prod(fractions).denominator
 
 
 if __name__ == '__main__':

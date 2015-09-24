@@ -13,13 +13,11 @@ include it once in your sum."""
 
 
 def task32():
-    l = set()
-    for a in range(1, 100):
-        for b in range(a, 10000):
-            digits = "".join(sorted(str(a * b) + str(a) + str(b)))
-            if digits == '123456789':
-                l.add(a * b)
-    return sum(l)
+    return sum(set((
+        a * b
+        for a in range(1, 100)
+        for b in range(a, 10000)
+        if "".join(sorted(str(a * b) + str(a) + str(b))) == '123456789')))
 
 
 if __name__ == '__main__':

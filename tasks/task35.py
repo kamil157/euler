@@ -10,15 +10,11 @@ from helpers.math_helper import generate_primes
 
 
 def generate_circulars(primes):
-    for p in primes:
-        s = str(p)
-        is_circular = True
-        for i in range(1, len(s)):
-            rotated = int(s[i:] + s[:i])
-            if rotated not in primes:
-                is_circular = False
-        if is_circular:
-            yield p
+    return (p for p in primes if is_circular(str(p), primes))
+
+
+def is_circular(s, primes):
+    return all(int(s[i:] + s[:i]) in primes for i in range(1, len(s)))
 
 
 def task35():

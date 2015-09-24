@@ -8,8 +8,8 @@ from math import factorial
 
 
 def task34():
-    return sum((n for n in range(10, 100000) if
-               n == sum(factorial(int(d)) for d in str(n))))
+    return sum(n for n in range(10, 100000)
+               if n == sum(factorial(int(d)) for d in str(n)))
 
 
 if __name__ == '__main__':

@@ -100,3 +100,7 @@ def get_max_path(tree):
 
 def divisor_sum(n):
     return sum(divisors(n)) - n
+
+
+def is_palindrome(s):
+    return str(s) == str(s)[::-1]
