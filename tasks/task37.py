@@ -13,16 +13,15 @@ from helpers.math_helper import generate_primes
 
 def truncatables():
     primes = set(generate_primes(1000000))
-    for n in primes:
-        if n > 10:
-            is_truncatable = True
-            for i in range(1, len(str(n))):
-                left = int(str(n)[:i])
-                right = int(str(n)[i:])
-                if left not in primes or right not in primes:
-                    is_truncatable = False
-            if is_truncatable:
-                yield n
+    return (n for n in primes
+            if n > 10
+            if is_truncatable(n, primes))
+
+
+def is_truncatable(n, primes):
+    s = str(n)
+    return all(int(s[:i]) in primes and int(s[i:]) in primes
+               for i in range(1, len(s)))
 
 
 def task37():
