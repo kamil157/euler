@@ -21,12 +21,9 @@ def triangle_numbers(limit):
 
 def task42():
     with open("../res/task42_words.txt") as f:
-        s = f.read()
-        words = s[1:-1].split('","')
+        words = f.read()[1:-1].split('","')
         triangles = set(triangle_numbers(200))
-        triangle_words = [word for word in words if
-                          word_value(word) in triangles]
-        return len(triangle_words)
+        return sum(1 for word in words if word_value(word) in triangles)
 
 
 if __name__ == "__main__":

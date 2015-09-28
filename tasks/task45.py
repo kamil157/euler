@@ -12,13 +12,13 @@ from tasks.task44 import pentagonal
 
 
 def hexagonal(limit):
-    return ((x * (2 * x - 1)) for x in range(1, limit))
+    return (n * (2 * n - 1) for n in range(1, limit))
 
 
 def task45():
-    pentagons = set(pentagonal(100000))
-    hexagons = set(hexagonal(100000))
-    return next(n for n in pentagons & hexagons if n > 40755)
+    # all hexagonal numbers are also triangle
+    return next(n for n in set(pentagonal(100000)) & set(hexagonal(100000))
+                if n > 40755)
 
 
 if __name__ == '__main__':

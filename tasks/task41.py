@@ -9,9 +9,9 @@ from helpers.math_helper import is_prime
 
 
 def pandigitals():
+    # pandigitals of length 8 or 9 are divisible by 3
     for length in range(1, 8):
-        digits = ''.join([str(i) for i in range(1, length + 1)])
-        for perm in permutations(str(digits)):
+        for perm in permutations('1234567'[:length]):
             n = int(''.join(perm))
             if is_prime(n):
                 yield n

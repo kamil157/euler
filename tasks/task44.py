@@ -12,19 +12,15 @@ of D?"""
 
 
 def pentagonal(n):
-    return (i * (3 * i - 1) // 2 for i in range(1, n))
+    return (n * (3 * n - 1) // 2 for n in range(1, n))
 
 
 def task44():
-    limit = 10000
-    l = list(pentagonal(limit))
-    s = set(pentagonal(limit))
-    for i in range(len(l)):
-        for j in range(i, len(l)):
-            d = l[j] - l[i]
-            n = l[j] + l[i]
-            if d in s and n in s:
-                return d
+    l = list(pentagonal(10000))
+    s = set(l)
+    return next(m - n for n in l for m in l
+                if m - n in s
+                if m + n in s)
 
 
 if __name__ == "__main__":
