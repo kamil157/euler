@@ -15,7 +15,7 @@ concatenated product of an integer with (1,2, ... , n) where n > 1?"""
 
 
 def pandigital_products():
-    for n in range(10000):
+    for n in range(10000):  # too many digits for n >= 10000
         concat_prod = ''
         i = 1
         while len(concat_prod) < 9:
