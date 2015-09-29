@@ -1,6 +1,7 @@
 from ctypes import cdll
 from functools import lru_cache, reduce
 from operator import mul
+import operator
 
 
 @lru_cache(maxsize=None)
@@ -104,3 +105,12 @@ def divisor_sum(n):
 
 def is_palindrome(s):
     return str(s) == str(s)[::-1]
+
+
+def choose(n, r):
+    r = min(r, n - r)
+    if r == 0:
+        return 1
+    numer = reduce(operator.mul, range(n, n - r, -1))
+    denom = reduce(operator.mul, range(1, r + 1))
+    return numer // denom

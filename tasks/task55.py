@@ -27,22 +27,19 @@ How many Lychrel numbers are there below ten-thousand?
 
 NOTE: Wording was modified slightly on 24 April 2007 to emphasise the
 theoretical nature of Lychrel numbers."""
+from helpers.math_helper import is_palindrome
 
 
 def task55():
-    return sum(is_lychrel(n) for n in range(10000))
+    return sum(1 for n in range(10000) if is_lychrel(n))
 
 
 def is_lychrel(n):
     for i in range(50):
-        n += reverse(n)
-        if n == reverse(n):
+        n += int(str(n)[::-1])
+        if is_palindrome(n):
             return False
     return True
-
-
-def reverse(n):
-    return int(str(n)[::-1])
 
 
 if __name__ == '__main__':

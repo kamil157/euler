@@ -17,8 +17,7 @@ def task50():
 
 
 def consecutive_primes():
-    limit = 1000000
-    primes_list = list(generate_primes(limit))
+    primes_list = list(generate_primes(1000000))
     primes_set = set(primes_list)
     for i in range(10):
         prime_sum = 0

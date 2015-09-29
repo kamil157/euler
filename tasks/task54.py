@@ -66,12 +66,12 @@ def two_pairs(ranks):
 
 
 def rate_hand(hand):
-    ranks = sorted([card_value(rank) for rank, _ in hand], reverse=True)
+    ranks = sorted((card_value(rank) for rank, _ in hand), reverse=True)
     if flush(hand) and straight(ranks):
         return 8, ranks
     elif kind(ranks, 4):
         return 7, kind(ranks, 4), ranks
-    elif kind(ranks, 3) and kind(hand, 2):
+    elif kind(ranks, 3) and kind(ranks, 2):
         return 6, kind(ranks, 3), kind(ranks, 2)
     elif flush(hand):
         return 5, ranks
@@ -80,7 +80,7 @@ def rate_hand(hand):
     elif kind(ranks, 3):
         return 3, kind(ranks, 3), ranks
     elif two_pairs(ranks):
-        return 2, two_pairs(hand), ranks
+        return 2, two_pairs(ranks), ranks
     elif kind(ranks, 2):
         return 1, kind(ranks, 2), ranks
     else:
@@ -88,8 +88,8 @@ def rate_hand(hand):
 
 
 def task54():
-    with open("../res/task54_poker.txt") as f:
-        lines = [line.split() for line in f.readlines()]
+    with open("../res/task54_poker.txt") as file:
+        lines = [line.split() for line in file.readlines()]
     return sum(rate_hand(line[:5]) > rate_hand(line[5:]) for line in lines)
 
 

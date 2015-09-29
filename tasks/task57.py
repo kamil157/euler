@@ -20,15 +20,13 @@ with more digits than denominator?"""
 
 def task57():
     count = 0
-    a = 1
-    b = 1
+    numer = 1
+    denom = 1
     for _ in range(1000):
-        a += 2 * b
-        b = a - b
-        if len(str(a)) > len(str(b)):
+        numer, denom = numer + 2 * denom, numer + denom
+        if len(str(numer)) > len(str(denom)):
             count += 1
     return count
-
 
 if __name__ == '__main__':
     print(task57())
