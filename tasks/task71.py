@@ -15,6 +15,8 @@ of 3/7."""
 
 
 def task71():
+    # Find max representation of 3/7 under 1000000 and subtract 1 to get the
+    # fraction immediately to the left.
     return (1000000 - 1000000 % 7) * 3 // 7 - 1
 
 
