@@ -11,20 +11,22 @@ The first three consecutive numbers to have three distinct prime factors are:
 
 Find the first four consecutive integers to have four distinct prime factors.
 What is the first of these numbers?"""
+from itertools import count
+
 from helpers.math_helper import generate_primes, divisors
 
 
 def task47():
     primes = set(generate_primes(1000))
-    for start in range(1000000):
-        has_four_factors = True
-        for i in range(start, start + 4):
-            factors = divisors(i)
-            prime_factors = factors.intersection(primes) - {1}
-            if len(prime_factors) != 4:
-                has_four_factors = False
-        if has_four_factors:
-            return start
+    return next(n for n in count() if has_four_factors(primes, n))
+
+
+def has_four_factors(primes, n):
+    return all(prime_factors(i, primes) == 4 for i in range(n, n + 4))
+
+
+def prime_factors(i, primes):
+    return len(divisors(i).intersection(primes))
 
 
 if __name__ == '__main__':

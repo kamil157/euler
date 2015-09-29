@@ -12,16 +12,19 @@ It turns out that the conjecture was false.
 
 What is the smallest odd composite that cannot be written as the sum
 of a prime and twice a square?"""
-from helpers.math_helper import generate_primes
+from itertools import count
+
+from helpers.math_helper import is_prime
 
 
 def task46():
-    limit = 10000
-    primes = set(generate_primes(limit))
-    odd_composites = [n for n in range(2, limit) if
-                      n not in primes and n % 2 != 0]
-    return next(n for n in odd_composites if all(
-        n - 2 * i ** 2 not in primes for i in range(1, int(n ** 0.5))))
+    return next(n for n in count(3, 2)
+                if not is_prime(n)
+                if not is_goldbach(n))
+
+
+def is_goldbach(n):
+    return any(is_prime(n - 2 * i ** 2) for i in range(1, int(n ** 0.5)))
 
 
 if __name__ == '__main__':

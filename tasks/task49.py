@@ -11,15 +11,20 @@ from helpers.math_helper import generate_primes
 
 
 def task49():
-    primes = set(generate_primes(10000))
-    for a in range(1001, 10000, 2):
-        if a in primes and a != 1487:
-            for b in range(a + 2, 10000, 2):
-                if b in primes:
-                    c = b + (b - a)
-                    if c in primes:
-                        if sorted(str(a)) == sorted(str(b)) == sorted(str(c)):
-                            return int(''.join(map(str, [a, b, c])))
+    limit = 10000
+    primes = set(generate_primes(limit))
+
+    return next(int(''.join(map(str, [a, b, c(a, b)])))
+                for a in primes.intersection(range(1001, limit, 2))
+                for b in primes.intersection(range(a + 2, limit, 2))
+                if a != 1487
+                if c(a, b) in primes
+                if sorted(str(a)) == sorted(str(b)) == sorted(str(c(a, b))))
+
+
+def c(a, b):
+    return b + (b - a)
+
 
 if __name__ == '__main__':
     print(task49())
