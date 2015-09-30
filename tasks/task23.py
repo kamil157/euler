@@ -17,14 +17,14 @@ numbers is less than this limit.
 Find the sum of all the positive integers which cannot be written as the sum
 of two abundant numbers."""
 
-from helpers.math_helper import divisor_sum
+from helpers.math_helper import proper_divisor_sum
 
 
 def task23():
     # Every number greater than 20161 can be expressed
     # as a sum of two abundant numbers.
     limit = 20161
-    abundants = set(i for i in range(1, limit + 1) if divisor_sum(i) > i)
+    abundants = set(i for i in range(1, limit + 1) if proper_divisor_sum(i) > i)
 
     def abundant_sum(i):
         return any(i - a in abundants for a in abundants)

@@ -9,13 +9,13 @@ and 142; so d(284) = 220.
 
 Evaluate the sum of all the amicable numbers under 10000."""
 
-from helpers.math_helper import divisor_sum
+from helpers.math_helper import proper_divisor_sum
 
 
 def amicable(limit):
     for a in range(2, limit):
-        b = divisor_sum(a)
-        if divisor_sum(b) == a and a != b:
+        b = proper_divisor_sum(a)
+        if proper_divisor_sum(b) == a and a != b:
             yield a
 
 

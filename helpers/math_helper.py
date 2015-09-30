@@ -99,7 +99,7 @@ def get_max_path(tree):
     return tree[0][0]
 
 
-def divisor_sum(n):
+def proper_divisor_sum(n):
     return sum(divisors(n)) - n
 
 
