@@ -12,7 +12,7 @@ consecutive primes?"""
 from helpers.math_helper import generate_primes
 
 
-def task50():
+def solve():
     return max(consecutive_primes())[1]
 
 
@@ -28,4 +28,4 @@ def consecutive_primes():
 
 
 if __name__ == '__main__':
-    print(task50())
+    print(solve())

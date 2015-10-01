@@ -17,7 +17,7 @@ from itertools import count
 from helpers.math_helper import is_prime
 
 
-def task46():
+def solve():
     return next(n for n in count(3, 2)
                 if not is_prime(n)
                 if not is_goldbach(n))
@@ -28,4 +28,4 @@ def is_goldbach(n):
 
 
 if __name__ == '__main__':
-    print(task46())
+    print(solve())

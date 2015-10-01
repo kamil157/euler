@@ -35,9 +35,9 @@ def are_digits_divisible(perm, primes):
                for i in range(7))
 
 
-def task43():
+def solve():
     return sum(pandigitals())
 
 
 if __name__ == '__main__':
-    print(task43())
+    print(solve())

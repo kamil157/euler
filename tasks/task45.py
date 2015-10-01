@@ -8,18 +8,14 @@ It can be verified that T285 = P165 = H143 = 40755.
 
 Find the next triangle number that is also pentagonal and hexagonal."""
 
-from tasks.task44 import pentagonal
+from helpers.math_helper import pentagonal, hexagonal
 
 
-def hexagonal(limit):
-    return (n * (2 * n - 1) for n in range(1, limit))
-
-
-def task45():
+def solve():
     # all hexagonal numbers are also triangle
     return next(n for n in set(pentagonal(100000)) & set(hexagonal(100000))
                 if n > 40755)
 
 
 if __name__ == '__main__':
-    print(task45())
+    print(solve())

@@ -20,7 +20,7 @@ of two abundant numbers."""
 from helpers.math_helper import proper_divisor_sum
 
 
-def task23():
+def solve():
     # Every number greater than 20161 can be expressed
     # as a sum of two abundant numbers.
     limit = 20161
@@ -33,4 +33,4 @@ def task23():
 
 
 if __name__ == "__main__":
-    print(task23())
+    print(solve())

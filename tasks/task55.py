@@ -30,7 +30,7 @@ theoretical nature of Lychrel numbers."""
 from helpers.math_helper import is_palindrome
 
 
-def task55():
+def solve():
     return sum(1 for n in range(10000) if is_lychrel(n))
 
 
@@ -43,4 +43,4 @@ def is_lychrel(n):
 
 
 if __name__ == '__main__':
-    print(task55())
+    print(solve())

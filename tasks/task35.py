@@ -17,10 +17,10 @@ def is_circular(s, primes):
     return all(int(s[i:] + s[:i]) in primes for i in range(1, len(s)))
 
 
-def task35():
+def solve():
     primes = set(generate_primes(1000000))
     return len(list(generate_circulars(primes)))
 
 
 if __name__ == '__main__':
-    print(task35())
+    print(solve())

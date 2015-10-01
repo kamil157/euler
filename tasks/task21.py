@@ -19,9 +19,9 @@ def amicable(limit):
             yield a
 
 
-def task21():
+def solve():
     return sum(amicable(10000))
 
 
 if __name__ == "__main__":
-    print(task21())
+    print(solve())

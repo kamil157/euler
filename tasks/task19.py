@@ -16,7 +16,7 @@ How many Sundays fell on the first of the month during the twentieth century
 from calendar import weekday
 
 
-def task19():
+def solve():
     sunday = 6
     months = 12
     return sum(1 for y in range(1901, 2001) for m in range(1, months + 1)
@@ -24,4 +24,4 @@ def task19():
 
 
 if __name__ == '__main__':
-    print(task19())
+    print(solve())

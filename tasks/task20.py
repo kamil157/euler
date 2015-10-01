@@ -8,9 +8,9 @@ Find the sum of the digits in the number 100!"""
 from math import factorial
 
 
-def task20():
+def solve():
     return sum(int(d) for d in str(factorial(100)))
 
 
 if __name__ == '__main__':
-    print(task20())
+    print(solve())

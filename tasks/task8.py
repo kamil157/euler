@@ -59,9 +59,9 @@ def max_product(n, k):
     return max([product(n[i:i + k]) for i in range(len(n) - k + 1)])
 
 
-def task8():
+def solve():
     return max_product(''.join(number.split()), 13)
 
 
 if __name__ == '__main__':
-    print(task8())
+    print(solve())

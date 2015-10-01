@@ -18,7 +18,7 @@ In the first one-thousand expansions, how many fractions contain a numerator
 with more digits than denominator?"""
 
 
-def task57():
+def solve():
     count = 0
     numer = 1
     denom = 1
@@ -29,4 +29,4 @@ def task57():
     return count
 
 if __name__ == '__main__':
-    print(task57())
+    print(solve())

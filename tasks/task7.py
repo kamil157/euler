@@ -5,9 +5,9 @@ What is the 10 001st prime number?"""
 from helpers.math_helper import generate_primes
 
 
-def task7():
+def solve():
     return list(generate_primes(200000))[10000]
 
 
 if __name__ == "__main__":
-    print(task7())
+    print(solve())

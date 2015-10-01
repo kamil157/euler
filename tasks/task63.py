@@ -4,7 +4,7 @@ number, 134217728=8^9, is a ninth power.
 How many n-digit positive integers exist which are also an nth power?"""
 
 
-def task63():
+def solve():
     return len(set(a ** b
                    for a in range(1, 10)
                    for b in range(100)
@@ -16,4 +16,4 @@ def method_name():
 
 
 if __name__ == '__main__':
-    print(task63())
+    print(solve())

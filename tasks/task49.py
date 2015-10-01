@@ -10,7 +10,7 @@ sequence?"""
 from helpers.math_helper import generate_primes
 
 
-def task49():
+def solve():
     limit = 10000
     primes = set(generate_primes(limit))
 
@@ -27,4 +27,4 @@ def c(a, b):
 
 
 if __name__ == '__main__':
-    print(task49())
+    print(solve())

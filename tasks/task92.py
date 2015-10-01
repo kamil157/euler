@@ -21,7 +21,7 @@ def sum_square_digits(n):
     return s
 
 
-def task92():
+def solve():
     at1 = set()
     at89 = set()
 
@@ -42,4 +42,4 @@ def task92():
 
 
 if __name__ == '__main__':
-    print(task92())
+    print(solve())

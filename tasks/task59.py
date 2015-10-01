@@ -37,7 +37,7 @@ def find_words(text, english_words):
             if word.lower().strip(',.;()') in english_words)
 
 
-def task59():
+def solve():
     with open("../res/task59_cipher.txt") as file:
         cipher = [int(c) for c in file.read().split(',')]
     with open("../res/task59_words.txt") as word_file:
@@ -54,4 +54,4 @@ def decipher(cipher, english_words):
 
 
 if __name__ == '__main__':
-    print(task59())
+    print(solve())

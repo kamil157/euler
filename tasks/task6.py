@@ -11,10 +11,10 @@ Find the difference between the sum of the squares of the first one hundred
 natural numbers and the square of the sum."""
 
 
-def task6():
+def solve():
     r = range(101)
     return sum(r) ** 2 - sum(i ** 2 for i in r)
 
 
 if __name__ == '__main__':
-    print(task6())
+    print(solve())

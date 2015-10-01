@@ -12,7 +12,7 @@ Find the smallest denominator d, having a resilience R(d) < 15499/94744."""
 from helpers.math_helper import generate_primes, resilience
 
 
-def task243():
+def solve():
     primes = list(generate_primes(30))
 
     i = 0
@@ -28,4 +28,4 @@ def task243():
 
 
 if __name__ == '__main__':
-    print(task243())
+    print(solve())

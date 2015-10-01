@@ -23,9 +23,9 @@ from itertools import count
 from helpers.math_helper import fib
 
 
-def task25():
+def solve():
     return next(n for n in count(1) if len(str(fib(n))) == 1000)
 
 
 if __name__ == '__main__':
-    print(task25())
+    print(solve())

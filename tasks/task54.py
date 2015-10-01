@@ -87,11 +87,11 @@ def rate_hand(hand):
         return 0, ranks
 
 
-def task54():
+def solve():
     with open("../res/task54_poker.txt") as file:
         lines = [line.split() for line in file.readlines()]
     return sum(rate_hand(line[:5]) > rate_hand(line[5:]) for line in lines)
 
 
 if __name__ == '__main__':
-    print(task54())
+    print(solve())

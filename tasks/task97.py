@@ -9,9 +9,9 @@ However, in 2004 there was found a massive non-Mersenne prime which contains
 Find the last ten digits of this prime number."""
 
 
-def task97():
+def solve():
     return (28433 * 2 ** 7830457 + 1) % 10000000000
 
 
 if __name__ == '__main__':
-    print(task97())
+    print(solve())

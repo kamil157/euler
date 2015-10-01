@@ -2,7 +2,7 @@
 1_2_3_4_5_6_7_8_9_0, where each "_" is a single digit."""
 
 
-def task206():
+def solve():
     s = '1_2_3_4_5_6_7_8_9_0'
     low = int(int(s.replace('_', '0')) ** 0.5)
     high = int(int(s.replace('_', '9')) ** 0.5)
@@ -12,4 +12,4 @@ def task206():
 
 
 if __name__ == '__main__':
-    print(task206())
+    print(solve())

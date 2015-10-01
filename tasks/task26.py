@@ -30,9 +30,9 @@ def count_cycle(d):
     return len(remainders) - remainders.index(r)
 
 
-def task26():
+def solve():
     return max((count_cycle(d), d) for d in range(2, 1000))[1]
 
 
 if __name__ == '__main__':
-    print(task26())
+    print(solve())

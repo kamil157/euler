@@ -14,7 +14,7 @@ Find the minimal path sum, in matrix.txt (right click and
 the top left to the bottom right by only moving right and down."""
 
 
-def task81():
+def solve():
     with open('../res/task81_matrix.txt') as file:
         m = [[int(n) for n in line.split(',')] for line in file]
 
@@ -30,4 +30,4 @@ def task81():
 
 
 if __name__ == '__main__':
-    print(task81())
+    print(solve())

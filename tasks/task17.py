@@ -19,9 +19,9 @@ def count_letters(n):
     return sum(1 for c in words if c in ascii_letters)
 
 
-def task17():
+def solve():
     return sum(count_letters(i) for i in range(1, 1001))
 
 
 if __name__ == '__main__':
-    print(task17())
+    print(solve())

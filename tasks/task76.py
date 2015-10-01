@@ -12,9 +12,9 @@ positive integers?"""
 from helpers.math_helper import partitions
 
 
-def task76():
+def solve():
     return partitions(range(1, 100), 100)
 
 
 if __name__ == '__main__':
-    print(task76())
+    print(solve())

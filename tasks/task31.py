@@ -9,9 +9,9 @@ How many different ways can £2 be made using any number of coins?"""
 from helpers.math_helper import partitions
 
 
-def task31():
+def solve():
     return partitions([1, 2, 5, 10, 20, 50, 100, 200], 200)
 
 
 if __name__ == '__main__':
-    print(task31())
+    print(solve())

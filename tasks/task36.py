@@ -15,9 +15,9 @@ def generate_palindromes():
             if is_palindrome(bin(n)[2:]))
 
 
-def task36():
+def solve():
     return sum(generate_palindromes())
 
 
 if __name__ == '__main__':
-    print(task36())
+    print(solve())

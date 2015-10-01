@@ -26,9 +26,9 @@ def chain(n):
         return 1 + chain(3 * n + 1)
 
 
-def task14():
+def solve():
     return max((chain(i), i) for i in range(1000000))[1]
 
 
 if __name__ == '__main__':
-    print(task14())
+    print(solve())

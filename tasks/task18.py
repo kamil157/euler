@@ -34,7 +34,7 @@ and requires a clever method! ;o)"""
 from helpers.math_helper import read_grid, get_max_path
 
 
-def task18():
+def solve():
     grid = """75
 95 64
 17 47 82
@@ -54,4 +54,4 @@ def task18():
 
 
 if __name__ == '__main__':
-    print(task18())
+    print(solve())

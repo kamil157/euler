@@ -17,9 +17,9 @@ def pandigitals():
                 yield n
 
 
-def task41():
+def solve():
     return max(pandigitals())
 
 
 if __name__ == '__main__':
-    print(task41())
+    print(solve())

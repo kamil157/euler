@@ -86,5 +86,5 @@ class TestAnswers(unittest.TestCase):
 
     def run_tests(self, answers):
         for i, answer in answers.items():
-            exec("from tasks.task{i} import task{i}".format(i=i))
-            self.assertEqual(eval("task" + str(i))(), answer)
+            exec("from tasks.task{i} import solve".format(i=i))
+            self.assertEqual(eval("solve")(), answer)

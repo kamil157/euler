@@ -20,7 +20,7 @@ diagonals first falls below 10%?"""
 from helpers.math_helper import spiral, is_prime
 
 
-def task58():
+def solve():
     primes = 0
     for i, n in enumerate(spiral(100000)):
         if is_prime(n):
@@ -30,4 +30,4 @@ def task58():
 
 
 if __name__ == '__main__':
-    print(task58())
+    print(solve())

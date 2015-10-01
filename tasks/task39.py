@@ -30,9 +30,9 @@ def calculate_b(a, p):
     return p * (p - 2 * a) / (2 * (p - a))
 
 
-def task39():
+def solve():
     return max(number_of_pythagorean_triples())[1]
 
 
 if __name__ == '__main__':
-    print(task39())
+    print(solve())

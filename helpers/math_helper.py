@@ -114,3 +114,15 @@ def choose(n, r):
     numer = reduce(operator.mul, range(n, n - r, -1))
     denom = reduce(operator.mul, range(1, r + 1))
     return numer // denom
+
+
+def word_value(word):
+    return sum(ord(c) - ord('A') + 1 for c in word)
+
+
+def pentagonal(n):
+    return (n * (3 * n - 1) // 2 for n in range(1, n))
+
+
+def hexagonal(limit):
+    return (n * (2 * n - 1) for n in range(1, limit))

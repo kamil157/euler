@@ -9,13 +9,10 @@ worth 3 + 15 + 12 + 9 + 14 = 53, is the 938th name in the list. So, COLIN
 would obtain a score of 938 × 53 = 49714.
 
 What is the total of all the name scores in the file?"""
+from helpers.math_helper import word_value
 
 
-def word_value(word):
-    return sum(ord(c) - ord('A') + 1 for c in word)
-
-
-def task22():
+def solve():
     with open("../res/task22_names.txt") as file:
         names = file.read()[1:-1].split('","')
     return sum((i + 1) * word_value(name)
@@ -23,4 +20,4 @@ def task22():
 
 
 if __name__ == '__main__':
-    print(task22())
+    print(solve())

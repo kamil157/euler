@@ -20,10 +20,10 @@ billion years to check them all. There is an efficient algorithm to solve it.
 from helpers.math_helper import read_grid, get_max_path
 
 
-def task67():
+def solve():
     with open('../res/task67_triangle.txt') as file:
         return get_max_path(read_grid(file.read()))
 
 
 if __name__ == '__main__':
-    print(task67())
+    print(solve())

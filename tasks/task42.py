@@ -12,14 +12,14 @@ Using words.txt (right click and 'Save Link/Target As...'), a 16K text file
 containing nearly two-thousand common English words, how many are triangle
 words?"""
 
-from tasks.task22 import word_value
+from helpers.math_helper import word_value
 
 
 def triangle_numbers(limit):
     return ((x * (x + 1) // 2) for x in range(1, limit))
 
 
-def task42():
+def solve():
     with open("../res/task42_words.txt") as f:
         words = f.read()[1:-1].split('","')
         triangles = set(triangle_numbers(200))
@@ -27,4 +27,4 @@ def task42():
 
 
 if __name__ == "__main__":
-    print(task42())
+    print(solve())

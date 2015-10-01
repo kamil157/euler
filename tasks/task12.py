@@ -20,7 +20,7 @@ divisors?"""
 from helpers.math_helper import num_divisors
 
 
-def task12():
+def solve():
     i = 1
     triangle = i
     while True:
@@ -32,4 +32,4 @@ def task12():
 
 
 if __name__ == "__main__":
-    print(task12())
+    print(solve())

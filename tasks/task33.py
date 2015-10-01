@@ -14,7 +14,7 @@ from fractions import Fraction
 from helpers.math_helper import prod
 
 
-def task33():
+def solve():
     fractions = (Fraction(a, b)
                  for a in range(10, 100)
                  for b in range(a + 1, 100)
@@ -28,4 +28,4 @@ def task33():
 
 
 if __name__ == '__main__':
-    print(task33())
+    print(solve())

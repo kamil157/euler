@@ -15,10 +15,10 @@ are greater than one-million?"""
 from helpers.math_helper import choose
 
 
-def task53():
+def solve():
     ncr = (choose(n, r) for n in range(1, 101) for r in range(n))
     return sum(1 for n in ncr if n > 1000000)
 
 
 if __name__ == '__main__':
-    print(task53())
+    print(solve())

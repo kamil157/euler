@@ -12,7 +12,7 @@ Find the sum of all the numbers that can be written as the sum of fifth powers
 of their digits."""
 
 
-def task30():
+def solve():
     # The maximum value for one digit is 9 ^ 5 = 59049. For 7 digits, the
     # maximum sum would be 7 * 59049 = 413343, which doesn't even come close
     # to 1234567. Therefore the limit is 6 * 9 ^ 5.
@@ -21,4 +21,4 @@ def task30():
 
 
 if __name__ == '__main__':
-    print(task30())
+    print(solve())

@@ -24,9 +24,9 @@ def is_truncatable(n, primes):
                for i in range(1, len(s)))
 
 
-def task37():
+def solve():
     return sum(truncatables())
 
 
 if __name__ == '__main__':
-    print(task37())
+    print(solve())

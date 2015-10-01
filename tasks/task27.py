@@ -30,7 +30,7 @@ def count_primes(a, b, primes):
     return n
 
 
-def task27():
+def solve():
     primes = set(generate_primes(100000))
     r = range(-999, 1000, 2)
     _, a, b = max((count_primes(a, b, primes), a, b) for a in r for b in r)
@@ -38,4 +38,4 @@ def task27():
 
 
 if __name__ == '__main__':
-    print(task27())
+    print(solve())

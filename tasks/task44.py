@@ -9,13 +9,10 @@ It can be seen that P4 + P7 = 22 + 70 = 92 = P8. However, their difference,
 Find the pair of pentagonal numbers, Pj and Pk, for which their sum and
 difference are pentagonal and D = |Pk − Pj| is minimised; what is the value
 of D?"""
+from helpers.math_helper import pentagonal
 
 
-def pentagonal(n):
-    return (n * (3 * n - 1) // 2 for n in range(1, n))
-
-
-def task44():
+def solve():
     l = list(pentagonal(10000))
     s = set(l)
     return next(m - n for n in l for m in l
@@ -24,4 +21,4 @@ def task44():
 
 
 if __name__ == "__main__":
-    print(task44())
+    print(solve())

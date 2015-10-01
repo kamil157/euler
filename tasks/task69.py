@@ -19,7 +19,7 @@ Find the value of n ? 1,000,000 for which n/?(n) is a maximum."""
 from helpers.math_helper import generate_primes
 
 
-def task69():
+def solve():
     result = 1
     primes = list(generate_primes(20))
 
@@ -32,4 +32,4 @@ def task69():
 
 
 if __name__ == '__main__':
-    print(task69())
+    print(solve())

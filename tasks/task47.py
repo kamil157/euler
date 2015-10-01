@@ -16,7 +16,7 @@ from itertools import count
 from helpers.math_helper import generate_primes, divisors
 
 
-def task47():
+def solve():
     primes = set(generate_primes(1000))
     return next(n for n in count() if has_four_factors(primes, n))
 
@@ -30,4 +30,4 @@ def prime_factors(i, primes):
 
 
 if __name__ == '__main__':
-    print(task47())
+    print(solve())

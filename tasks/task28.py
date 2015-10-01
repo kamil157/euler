@@ -14,10 +14,10 @@ formed in the same way?"""
 from helpers.math_helper import spiral
 
 
-def task28():
+def solve():
     size = 1001
     return sum(spiral((size - 1) // 2))
 
 
 if __name__ == '__main__':
-    print(task28())
+    print(solve())

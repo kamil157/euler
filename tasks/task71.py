@@ -14,11 +14,11 @@ order of size, find the numerator of the fraction immediately to the left
 of 3/7."""
 
 
-def task71():
+def solve():
     # Find max representation of 3/7 under 1000000 and subtract 1 to get the
     # fraction immediately to the left.
     return (1000000 - 1000000 % 7) * 3 // 7 - 1
 
 
 if __name__ == '__main__':
-    print(task71())
+    print(solve())

@@ -11,9 +11,9 @@ def lcm(a, b):
     return a * b // gcd(a, b)
 
 
-def task5():
+def solve():
     return reduce(lcm, range(1, 20))
 
 
 if __name__ == '__main__':
-    print(task5())
+    print(solve())

@@ -6,7 +6,7 @@ contain the same digits."""
 from itertools import count
 
 
-def task52():
+def solve():
     return next(n for n in count(1) if contain_same_digits(n))
 
 
@@ -15,4 +15,4 @@ def contain_same_digits(n):
 
 
 if __name__ == '__main__':
-    print(task52())
+    print(solve())

@@ -12,7 +12,7 @@ HINT: Some products can be obtained in more than one way so be sure to only
 include it once in your sum."""
 
 
-def task32():
+def solve():
     return sum(set((
         a * b
         for a in range(1, 100)
@@ -21,4 +21,4 @@ def task32():
 
 
 if __name__ == '__main__':
-    print(task32())
+    print(solve())

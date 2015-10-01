@@ -205,9 +205,9 @@ numbers = """
 53503534226472524250874054075591789781264330331690"""
 
 
-def task13():
+def solve():
     return int(str(sum([int(s) for s in numbers.split()]))[:10])
 
 
 if __name__ == '__main__':
-    print(task13())
+    print(solve())

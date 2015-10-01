@@ -13,7 +13,7 @@ given above."""
 import math
 
 
-def task99():
+def solve():
     with open("../res/task99_base_exp.txt") as file:
         numbers = [[int(n) for n in line.split(',')] for line in file]
 
@@ -22,4 +22,4 @@ def task99():
 
 
 if __name__ == '__main__':
-    print(task99())
+    print(solve())
