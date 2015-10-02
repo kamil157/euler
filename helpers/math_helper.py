@@ -117,11 +117,11 @@ def choose(n, r):
 
 
 def word_value(word):
-    return sum(ord(c) - ord('A') + 1 for c in word)
+    return sum(ord(c) - ord('A') + 1 for c in word.upper())
 
 
-def pentagonal(n):
-    return (n * (3 * n - 1) // 2 for n in range(1, n))
+def pentagonal(limit):
+    return (n * (3 * n - 1) // 2 for n in range(1, limit))
 
 
 def hexagonal(limit):

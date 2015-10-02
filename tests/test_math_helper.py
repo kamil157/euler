@@ -147,3 +147,24 @@ class TestMathHelper(unittest.TestCase):
         self.assertEqual(choose(3, 2), 3)
         self.assertEqual(choose(4, 1), 4)
         self.assertEqual(choose(4, 2), 6)
+
+    def test_word_value(self):
+        self.assertEqual(word_value(""), 0)
+        self.assertEqual(word_value("a"), 1)
+        self.assertEqual(word_value("A"), 1)
+        self.assertEqual(word_value("aa"), 2)
+        self.assertEqual(word_value("b"), 2)
+        self.assertEqual(word_value("abc"), 6)
+        self.assertEqual(word_value("FFF"), 18)
+
+    def test_pentagonal(self):
+        self.assertEqual(list(pentagonal(2))[0], 1)
+        self.assertEqual(list(pentagonal(3))[1], 5)
+        self.assertEqual(list(pentagonal(4))[2], 12)
+        self.assertEqual(list(pentagonal(5))[3], 22)
+
+    def test_hexagonal(self):
+        self.assertEqual(list(hexagonal(2))[0], 1)
+        self.assertEqual(list(hexagonal(3))[1], 6)
+        self.assertEqual(list(hexagonal(4))[2], 15)
+        self.assertEqual(list(hexagonal(5))[3], 28)
