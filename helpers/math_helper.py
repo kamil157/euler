@@ -108,6 +108,8 @@ def is_palindrome(s):
 
 
 def choose(n, r):
+    if n < r:
+        return 0
     r = min(r, n - r)
     if r == 0:
         return 1

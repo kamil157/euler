@@ -147,6 +147,7 @@ class TestMathHelper(unittest.TestCase):
         self.assertEqual(choose(3, 2), 3)
         self.assertEqual(choose(4, 1), 4)
         self.assertEqual(choose(4, 2), 6)
+        self.assertEqual(choose(2, 4), 0)
 
     def test_word_value(self):
         self.assertEqual(word_value(""), 0)
