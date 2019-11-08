@@ -1,4 +1,3 @@
-from ctypes import cdll
 from functools import lru_cache, reduce
 from operator import mul
 import operator
@@ -44,9 +43,7 @@ def divisors(n):
 
 
 def num_divisors(n):
-    if "lib" not in num_divisors.__dict__:
-        num_divisors.lib = cdll.LoadLibrary('..\lib\Euler++')
-    return num_divisors.lib.numDivisors(n)
+    return len(divisors(n))
 
 
 def spiral(n):
