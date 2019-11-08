@@ -1,8 +1,25 @@
 # Project Euler
-https://projecteuler.net/
+Solutions to tasks from https://projecteuler.net/
 
-required packages: [inflect](https://pypi.python.org/pypi/inflect)
+### To install dependencies:
+`pip3 install -r requirements.txt`
 
-required DLLs: [Euler++](https://github.com/kamil157/Euler-)
+### To run tests:
 
-(put the dll in PROJECT_ROOT/lib/Euler++)
+from project root run:
+
+```
+export PYTHONPATH=\`pwd\`
+cd tests
+python3 -m unittest
+```
+
+### To run a single task:
+
+from project root run:
+
+```
+export PYTHONPATH=\`pwd\`
+cd tasks
+python3 task1.py
+```
