@@ -3,7 +3,7 @@
 
 What is the smallest positive number that is evenly divisible by all of the
 numbers from 1 to 20?"""
-from fractions import gcd
+from math import gcd
 from functools import reduce
 
 
